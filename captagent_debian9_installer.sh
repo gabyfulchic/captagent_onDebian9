@@ -46,7 +46,9 @@ sed -i.old 's/GRUB_CMDLINE_LINUX=""/GRUB_CMDLINE_LINUX="net.ifnames=0 biosdevnam
 
 #again i keep you a default grub file saved if never you don't trust me.
 mkdir old
-mv grub.old /old
+mv grub.old old/
 sudo update-grub
 
+#now i check for you the captagent service
+sudo service captagent restart && sudo service captagent status -l
 
