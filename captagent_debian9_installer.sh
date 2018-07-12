@@ -19,20 +19,17 @@ sed -i.default 's/127.0.0.1/192.168.0.88/' transport_hep.xml
 mkdir defaults
 mv transport_hep.xml.default defaults/
 
-sed -i.trash 's/9061/9060/' transport_hep.xml
-rm -rf transport_hep.xml.trash
+sed -i 's/9061/9060/' transport_hep.xml
 
 #double quotes used to well translate the variable
-sed -i.trash "s/2001/$number/" transport_hep.xml
-rm -rf transport_hep.xml.trash
+sed -i "s/2001/$number/" transport_hep.xml
 
 #here i modify the interface because on debian 9 your interfaces
 #are named enp0sxxxx so eth0 will occur an error on captagent
 sed -i.default '6 s/eth0/any/' socket_pcap.xml
 mv socket_pcap.xml.default defaults/
 
-sed -i.trash '18 s/eth0/any/' socket_pcap.xml
-rm -rf socket_pcap.xml.trash
+sed -i '18 s/eth0/any/' socket_pcap.xml
 
 #In debian 9, also called Stretch, your interfaces are named enp0sxxx
 #but like captagent is only using eth interfaces you will need to change
