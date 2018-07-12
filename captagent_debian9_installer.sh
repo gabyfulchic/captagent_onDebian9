@@ -1,7 +1,5 @@
 #!/bin/bash
 
-number=$RANDOM
-
 apt-get install sudo -y
 sudo apt-get update -y && sudo apt-get upgrade -y
 
@@ -22,7 +20,8 @@ mv transport_hep.xml.default defaults/
 sed -i 's/9061/9060/' transport_hep.xml
 
 #double quotes used to well translate the variable
-sed -i "s/2001/$number/" transport_hep.xml
+read -p "Choose your capture-id : " cptId
+sed -i "s/2001/$cptId/" transport_hep.xml
 
 #here i modify the interface because on debian 9 your interfaces
 #are named enp0sxxxx so eth0 will occur an error on captagent
