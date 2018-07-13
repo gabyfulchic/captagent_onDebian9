@@ -8,7 +8,7 @@ sudo apt-get update -y && sudo apt-get upgrade -y
 #downloading and installing captagent method
 
 #install dependancies
-sudo apt-get install libexpat libcap libjson0-dev libtool automake -y
+sudo apt-get install libexpat1-dev libcap-dev libpcap-dev libuv-dev libgcrypt11-dev libjson0-dev libtool automake make flex bison -y
 if [ $? -ge 1 ];then
 	echo "The download of the dependancies failed"
 fi
