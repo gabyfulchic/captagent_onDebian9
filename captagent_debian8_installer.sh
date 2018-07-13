@@ -55,4 +55,8 @@ mv transport_hep.xml.default defaults/
 mv socket_pcap.xml.default defaults/
 
 #Restart the service and see his status
-sudo service captagent restart && sudo service captagent status -l
+#sudo service captagent restart && sudo service captagent status -l
+
+#test captagent
+captagent -h
+captagent -v
