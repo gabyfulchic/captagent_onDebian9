@@ -21,10 +21,12 @@ git clone https://github.com/sipcapture/captagent.git captagent
 cd captagent
 
 ./build.sh
-if [ $? -ge 1 ];then
-	echo "You can't build without dependancies"
-fi
 ./configure
+if [ $? -ge 1 ];then
+	echo "You can't configure without all the dependancies ! "
+	echo "Set up them manually if the script occur an issue try to install them ! "
+fi
+
 
 make && make install
 if [ $? -ge 1 ];then
