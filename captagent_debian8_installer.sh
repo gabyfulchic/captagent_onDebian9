@@ -17,7 +17,7 @@ fi
 #clone the capt6 project / compile it and install it
 cd /usr/src
 sudo apt-get install git -y
-git clone -b captagent6 https://github.com/sipcapture/captagent.git captagent
+git clone https://github.com/sipcapture/captagent.git captagent
 cd captagent
 
 ./build.sh
