@@ -41,7 +41,7 @@ echo "---------------------------------------------"
 echo " Vos fichiers de configuration de captagent :"
 echo "---------------------------------------------"
 
-cd /usr/local/captagent/conf/ && ls -al
+cd /usr/local/captagent/etc/captagent/ && ls -al
 
 
 #modify of the HEP conf file
