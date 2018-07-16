@@ -63,5 +63,6 @@ mv socket_pcap.xml.default defaults/
 #sudo service captagent restart && sudo service captagent status -l
 
 #test captagent
-captagent -h
-captagent -v
+#captagent -h && captagent -v
+
+
