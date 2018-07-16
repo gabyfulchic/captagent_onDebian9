@@ -35,11 +35,14 @@ fi
 
 #On se place dans le dossier de configuration de captagent /usr/src/captagent/conf/
 #mais comme ça peut varier j'ai adapté avec une commande spécifique
-cd "$(dirname "$(find / -type f -name captagent.xml | head -1)")"
+#cd "$(dirname "$(find / -type f -name captagent.xml | head -1)")"
+
 echo "---------------------------------------------"
 echo " Vos fichiers de configuration de captagent :"
 echo "---------------------------------------------"
-ls -al
+
+cd /usr/local/captagent/conf/ && ls -al
+
 
 #modify of the HEP conf file
 sed -i.default 's/127.0.0.1/192.168.0.88/' transport_hep.xml
