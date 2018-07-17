@@ -65,4 +65,10 @@ mv socket_pcap.xml.default defaults/
 #test captagent
 #captagent -h && captagent -v
 
+#create the captagent service
+#cp /usr/src/captagent/init/deb/jessie/captagent.service /etc/systemd/system
+#chmod 700 /etc/systemd/system/captagent.service
+#systemctl enable captagent.service
+#reboot
+
 
